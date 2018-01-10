@@ -1,0 +1,18 @@
+<div class="container pad-top">
+  <a ui-sref="newAsset" class="btn-primary btn-lg nodecoration">Add New Asset</a>
+  <table class="table assettable">
+      <tr>
+          <td><h3>All Assets</h3></td>
+          <td></td>
+      </tr>
+      <tr ng-repeat="asset in assets">
+          <td>{{asset.name}}</td>
+          <td>{{asset.description}}</td>
+          <td>{{asset.yearDiscovered}}</td>
+          <td>
+              <a class="btn btn-primary" ui-sref="viewAsset({id:asset.id})">View</a>
+              <a class="btn btn-danger"  ng-click="deleteAsset(asset)">Delete</a>
+          </td>
+      </tr>
+  </table>
+</div>
